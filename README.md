@@ -1,5 +1,26 @@
 # AgentCards
-Will presented at MICAI 2025 at CHARAL Workshop
+
+The rapid adoption of large language models (LLM) into AI agents has created new challenges for transparency, reproducibility, and governance. While prior artifacts such as Model Cards and Data Sheets for Datasets support documentation of models and data, no analogous standard exists for describing the operational characteristics of AI agents. This paper introduces Agent Cards, a structured documentation artifact designed to capture the essential attributes of an agent, including its roles, memory taxonomy, tool integrations, communication protocols, monitoring hooks, governance scope, and evaluation metrics. By standardizing how agents are described, Agent Cards provide a lightweight yet powerful tool for enabling transparency, comparability, and auditability across deployments. We present a template, illustrate its application through an example, and discuss the benefits of adopting Agent Cards as part of broader MLOps/LLMOps practices. We argue that Agent Cards can serve as a foundation for future work on agent ledgers, audit bundles, and maturity frameworks, offering practitioners and researchers a common vocabulary for responsible operationalization of agentic AI.
+
+Table 1 Proposed Agent Card Template
+
+| **Section**           | **Description**                                                                                                                                                                                                                                           |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Agent version**     | Semantic version of the agent release (e.g., 1.2).                                                                                                                                                                                                        |
+| **Agent Name**        | Identifier of the agent.                                                                                                                                                                                                                                  |
+| **Agent Role(s)**     | Planner, Executor, Critic, Orchestrator (list specific roles).                                                                                                                                                                                            |
+| **Inputs**            | Text files, APIs, structured and unstructured data.                                                                                                                                                                                                       |
+| **Outputs**           | API responses or text.                                                                                                                                                                                                                                    |
+| **Memory**            | Short-term: current turn/context window profile; Long-term.                                                                                                                                                                                               |
+| **Tools/Functions**   | Capabilities the agent can invoke beyond its core LLM, such as calculators, retrieval modules, external APIs, internal spreadsheets, or domain-specific tools. Document the type of tool, its intended purpose, and how it extends the agent’s abilities. |
+| **Communication**     | Human interface (chat/UI); agent-to-agent protocols; message schemas/versions; handoff/approval policies.                                                                                                                                                 |
+| **Monitoring**        | Logged metrics (latency, token usage, error rate); trace IDs; inference profile/feature flags; SLOs and alert routes.                                                                                                                                     |
+| **Governance**        | Safety filters/guardrails; PII/PHI handling; data retention and access control; approvals and audit checkpoints.                                                                                                                                          |
+| **Versioning**        | Release tag/date; prompt hash; toolchain/SBOM; external dependency versions; overall reproducibility hash.                                                                                                                                                |
+| **Known Limitations** | Current scope boundaries; partial automation notes; known brittleness or non-determinism sources (e.g., upstream API variability).                                                                                                                        |
+| **Evaluation**        | Benchmarks/KPIs (e.g., RAG quality, long-context stress); calibration/abstention policy; evaluation datasets/snapshots; last run date and results.                                                                                                        |
+
+YAML for LLM
 ```
 agent cards for ai agent
 agentcard: 1.0
