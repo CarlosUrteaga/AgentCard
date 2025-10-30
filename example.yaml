@@ -1,0 +1,16 @@
+id: agent-001
+name: TaxAdvisorBot
+purpose: Provide fiscal insights.
+memory:
+  type: vector
+  provider: postgres
+tools:
+  - search_tool
+  - calculator
+observability:
+  phoenix: true
+  logs: s3://agent-logs/
+governance:
+  owner: "Carlos Urteaga"
+  compliance: "ISO-42001"
+

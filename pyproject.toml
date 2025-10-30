@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentcard"
+version = "0.1.0"
+description = "A lightweight framework for documenting operational AI agents."
+readme = "README.md"
+authors = [
+  { name = "J. Carlos Urteaga-Reyesvera", email = "carlos.urteaga@outlook.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+  "pydantic>=2.0",
+  "PyYAML>=6.0"
+]
+keywords = ["AI Agents", "MLOps", "LLMOps", "documentation", "Agent Cards"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/urteagatech/agentcard"
+
