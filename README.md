@@ -99,7 +99,7 @@ pip install agentcard
 
 For testing:
 ```bash
-pip install -i https://test.pypi.org/simple/ agentcard
+pip install -i  agentcard
 ```
 
 ---
