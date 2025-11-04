@@ -97,11 +97,6 @@ risks:
 pip install agentcard
 ```
 
-For testing:
-```bash
-pip install -i  agentcard
-```
-
 ---
 
 ## 🚀 Quick Start
